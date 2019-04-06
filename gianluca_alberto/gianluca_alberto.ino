@@ -48,6 +48,21 @@ Serial.println("il test e cominciato");
 start = millis()+random(1000,10000);
 delay(1000);
 while(start>=millis())
+{
+  if(digitalRead(pulsante)==HIGH)                             //Ciclo utilizzato se premi prima del dovuto il bottone, ti ritorna "hai premuto troppo presto!!
+  {
+    fallito=true;
+    Serial.println("hai premuto troppo presto!!!");
+  }
+}
+digitalWrite(segnale,HIGH);
+start = millis();
+while(digitalRead(pulsante) == LOW){}
+digitalWrite(segnale,LOW);
+start = millis()-start;
+Serial.println(start + "millisecondi");
+}
+
 
 
 
