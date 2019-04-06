@@ -65,4 +65,18 @@ Serial.println(start + "millisecondi");
 
 
 
+void Lampeggi(int lume)                         //Metodo per far lampeggiare il led, 5 lampeggi rossi se hai perso mentre se hai vinto 5 lampeggi verdi.
+{
+  for(int i = 0;i<5;i++)
+  {
+    digitalWrite(lume,HIGH);
+    delay(400);
+    digitalWrite(lume,LOW);
+    delay(400);
+  }
+  
+}
+
+
+
 
