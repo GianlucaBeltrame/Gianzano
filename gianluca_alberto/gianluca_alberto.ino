@@ -40,4 +40,14 @@ else
 
 
 
+void CalcoloRiflesso(String frase,int segnale)                        //Metodo che calcola il riflesso led/buzzer.
+{
+Serial.println(frase);
+while(digitalRead(pulsante) == LOW){}
+Serial.println("il test e cominciato");
+start = millis()+random(1000,10000);
+delay(1000);
+while(start>=millis())
+
+
 
